@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Select screen</title>
+  <style>
+    body{
+      margin:0;
+      font-family:sans-serif;
+      background:#0e1523;
+      color:#fff;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+    }
+    .container{
+      width:90%;
+      max-width:500px;
+    }
+    h2{
+      background:#1e293b;
+      padding:10px;
+      border-radius:8px;
+      text-align:center;
+    }
+    .btns{
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      margin:10px 0 25px;
+    }
+    button{
+      flex:1;
+      padding:10px;
+      border:none;
+      border-radius:6px;
+      font-weight:bold;
+      cursor:pointer;
+      background:#334155;
+      color:#fff;
+      transition:.15s;
+    }
+    button:hover{background:#475569}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>0.25–0.5</h2>
+    <div class="btns">
+      <button onclick="go('0.25 - 0.5','0.25 PC')">PC</button>
+      <button onclick="go('0.25 - 0.5','0.5 Mobile')">Mobile</button>
+    </div>
+
+    <h2>0.75–1</h2>
+    <div class="btns">
+      <button onclick="go('0.75 - 1','0.75 PC')">PC</button>
+      <button onclick="go('0.75 - 1','0.75 Mobile')">Mobile</button>
+    </div>
+
+    <h2>1.1–1.5</h2>
+    <div class="btns">
+      <button onclick="go('1.1 - 1.5','1.1 PC')">PC</button>
+      <button onclick="go('1.1 - 1.5','1.1 Mobile')">Mobile</button>
+    </div>
+  </div>
+
+  <script>
+    function go(folder, file){
+      const path = `backups/${folder}/${file}.html`;
+      window.location.href = path;
+    }
+  </script>
+</body>
+</html>
